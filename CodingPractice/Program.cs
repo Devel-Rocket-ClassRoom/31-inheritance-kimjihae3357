@@ -229,3 +229,32 @@ class Dog : Animal
 {
     public void Bark() => Console.WriteLine($"{Name}이(가) 짖습니다.");
 }
+
+// 7
+
+Asset[] assets = new Asset[3];
+assets[0] = new Stock { Name = "삼성전자", Shares = 100 };
+assets[1] = new House { Name = "아파트", Mortgage = 300000000 };
+assets[2] = new Stock { Name = "SK하이닉스", Shares = 50 };
+
+foreach (Asset asset in assets)
+{
+    Console.WriteLine(asset.Name)
+}
+class Asset
+{
+    public string Name;
+}
+
+class Stock : Asset
+{
+    public int Shares;
+}
+
+class House : Asset
+{
+    public decimal Mortgage;
+}
+
+// 8-1
+
